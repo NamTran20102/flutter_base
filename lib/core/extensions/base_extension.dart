@@ -3,12 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as path;
 
-extension KeyboardHidingExtension on Widget {
-  void hideKeyboard() {
-    FocusManager.instance.primaryFocus?.unfocus();
-  }
-}
-
 extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
 
@@ -27,6 +21,8 @@ extension ContextExtension on BuildContext {
   Brightness get appBrightness => MediaQuery.of(this).platformBrightness;
 
   double get textScaleFactor => MediaQuery.of(this).textScaleFactor;
+
+  void get hideKeyboard => FocusManager.instance.primaryFocus?.unfocus();
 }
 
 extension StringExtension on String {

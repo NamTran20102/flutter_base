@@ -12,7 +12,7 @@ class AppHelper {
     return size ?? Size.zero;
   }
 
-  Future<Size> getImageDimension({required String url}) {
+  static Future<Size> getImageDimension({required String url}) {
     Completer<Size> completer = Completer<Size>();
     Image.network(url).image.resolve(ImageConfiguration.empty).addListener(
       ImageStreamListener(
