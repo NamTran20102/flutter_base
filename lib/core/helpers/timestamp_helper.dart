@@ -1,20 +1,21 @@
 import 'package:intl/intl.dart';
 
 class TimeStampHelper {
-  String timestampToDate({
+  static String timestampToDate({
     required int timestamp,
     required String dateFormat,
   }) {
-    DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(timestamp);
+    final val = timestamp.toString().length == 13 ? timestamp : timestamp * 1000;
+    DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(val);
     DateFormat format = DateFormat(dateFormat);
     return format.format(dateTime);
   }
 
-  DateTime timestampToDateTime({required int timestamp}) {
+  static DateTime timestampToDateTime({required int timestamp}) {
     return DateTime.fromMillisecondsSinceEpoch(timestamp);
   }
 
-  int dateTimeToTimestamp({required DateTime dateTime}) {
+  static int dateTimeToTimestamp({required DateTime dateTime}) {
     return dateTime.millisecondsSinceEpoch;
   }
 }
