@@ -54,3 +54,25 @@ enum EnumTypeFile {
     }
   }
 }
+
+enum EnumAnim {
+  fade,
+  size,
+  scale,
+  theme,
+  rotate,
+  rightToLeft,
+  leftToRight,
+  topToBottom,
+  bottomToTop,
+  leftToRightPop,
+  rightToLeftPop,
+  topToBottomPop,
+  bottomToTopPop,
+  leftToRightJoined,
+  rightToLeftJoined,
+  topToBottomJoined,
+  bottomToTopJoined,
+  rightToLeftWithFade,
+  leftToRightWithFade,
+}
